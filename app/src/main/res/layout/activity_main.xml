@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header_adaptative"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/example_adaptative"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/ad_adaptative"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <magazine.luiza.pocwebview.NoScrollWebView
+        android:id="@+id/ad_adaptative"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/header_320_100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_adaptative"
+        tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/load_adaptative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ad_adaptative"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ad_adaptative"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/error_adaptative"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error_placeholder"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ad_adaptative"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ad_adaptative"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/header_320_100"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/example_320_100"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/ad_320_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <magazine.luiza.pocwebview.NoScrollWebView
+        android:id="@+id/ad_320_100"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scrollbars="none"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/load_320_100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ad_320_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ad_320_100"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/error_320_100"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error_placeholder"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ad_320_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ad_320_100"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

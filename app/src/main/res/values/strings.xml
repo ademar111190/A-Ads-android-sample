@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">A-Ads</string>
+    <string name="app_title">A-Ads android sample</string>
+    <string name="example_adaptative">An ad using the available space (adaptative):</string>
+    <string name="example_320_100">An ad using 320x100:</string>
+    <string name="error_placeholder">Error placeholder</string>
+</resources>
