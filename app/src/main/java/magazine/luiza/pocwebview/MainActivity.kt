@@ -1,7 +1,9 @@
 package magazine.luiza.pocwebview
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebResourceError
@@ -71,6 +73,18 @@ class MainActivity : AppCompatActivity() {
             ) {
                 super.onReceivedError(view, request, error)
                 hasError = true
+            }
+
+            override fun shouldOverrideUrlLoading(
+                view: WebView?,
+                url: String?
+            ): Boolean {
+                val shouldOverride = url != null &&
+                        (url.startsWith("http://") || url.startsWith("https://"))
+                if (shouldOverride) {
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                }
+                return shouldOverride
             }
         }
         webView.loadData(getString(iframe), "text/html", "utf-8")
